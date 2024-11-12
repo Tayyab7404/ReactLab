@@ -1,8 +1,4 @@
-# ReactLab
-
-# CS-452 (CSSL5) R-20: User Interface Design with React JS  
-**Academic Year 2024-2025**
-
+# User Interface Design with React JS Lab
 ---
 
 ## Lab 01: Create a React Application
