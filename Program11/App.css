@@ -1,0 +1,10 @@
+.calander-details, .Calendar
+{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Calendar
+{
+    width: 350px;
+}

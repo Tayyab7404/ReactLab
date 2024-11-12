@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Greet</title>
+        <script src='https://unpkg.com/react@18/umd/react.development.js' crossorigin></script>
+        <script src='https://unpkg.com/react-dom@18/umd/react-dom.development.js' crossorigin></script>
+        <script src='https://unpkg.com/@babel/standalone/babel.min.js' crossorigin></script>
+    </head>
+
+    <body>
+        <div id='root'></div>
+
+        <script type='text/babel'>
+            function Greeting() {
+                const greet = () => {
+                    let now = new Date();
+                    let hrs = now.getHours();
+                    let name = document.getElementById('name').value;
+                    let greeting;
+
+                    if (hrs >= 5 && hrs < 12) {
+                        greeting = 'Good Morning ' + name;
+                    }
+                    else if (hrs >= 12 && hrs < 18) {
+                        greeting = 'Good Afternoon ' + name;
+                    }
+                    else {
+                        greeting = 'Good Evening ' + name;
+                    }
+
+                    ReactDOM.render(
+                        <div>
+                            <marquee direction='left'><h1>{greeting}</h1></marquee>
+                        </div>,
+                        document.getElementById('root')
+                    );
+                };
+
+                return (
+                    <div id='inputs'>
+                        <label>Enter your name : </label>
+                        <input type='text' id='name' /><br/>
+                        <button onClick={greet}>Greet</button>
+                    </div>
+                );
+            };
+
+            ReactDOM.render(
+                <Greeting/>,
+                document.getElementById('root')
+            );
+        </script>
+    </body>
+</html>
